@@ -24,5 +24,5 @@ ENV NODE_OPTIONS="--no-warnings --no-deprecation"
 RUN ln -sf /dev/null /var/log/node.log
 
 # Bind the app to the loopback interface
-CMD sh -c "trap 'kill 0' SIGINT SIGTERM; ./entrypoint.sh"
+#CMD sh -c "trap 'kill 0' SIGINT SIGTERM; ./entrypoint.sh"
 EXPOSE 8080
