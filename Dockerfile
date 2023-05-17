@@ -25,7 +25,7 @@ ENV NODE_OPTIONS="--no-warnings --no-deprecation"
 RUN ln -sf /dev/null /var/log/node.log
 
 # Set the modified entrypoint script as the entrypoint for the container
-ENTRYPOINT ["sh", "entrypoint.sh"]
+CMD sh -c "trap 'kill 0' SIGINT SIGTERM; ./entrypoint.sh"
 
 # Bind the app to the loopback interface
 CMD npm start
