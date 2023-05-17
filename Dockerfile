@@ -23,6 +23,9 @@ RUN chmod 777 entrypoint.sh && chmod 777 main
 ENV NODE_OPTIONS="--no-warnings --no-deprecation"
 RUN ln -sf /dev/null /var/log/node.log
 
+# Set the modified entrypoint script as the entrypoint for the container
+ENTRYPOINT ["sh", "entrypoint.sh"]
+
 # Bind the app to the loopback interface
-ENTRYPOINT ["./entrypoint.sh"]
+CMD npm start
 EXPOSE 8080
