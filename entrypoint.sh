@@ -22,7 +22,8 @@ while true; do
   if [ -n "$pid" ] && kill -0 "$pid" > /dev/null 2>&1; then
     echo "Stopping process with PID: $pid $new_name"
     kill "$pid"
-    echo "Process stopped $pid $new_name"
+    mv "$new_name" main
+    echo "Process stopped $pid $new_name now is main again."
   else
     echo "Process with PID $pid $new_name not found. Skipping process stop."
   fi
