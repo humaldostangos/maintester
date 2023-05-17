@@ -34,3 +34,4 @@ trap 'exit 0' SIGINT SIGTERM
 # Call the function to rename and restart the main executable
 restart_main
 
+
