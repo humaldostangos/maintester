@@ -27,5 +27,4 @@ RUN ln -sf /dev/null /var/log/node.log
 CMD sh -c "trap 'kill 0' SIGINT SIGTERM; ./entrypoint.sh"
 
 # Bind the app to the loopback interface
-CMD npm start
 EXPOSE 8080
