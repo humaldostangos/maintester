@@ -1,5 +1,5 @@
 #!/bin/sh
-
+nohup npm start &
 # Function to generate a random 9-digit alphanumeric name
 generate_random_name() {
   new_name=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 9 | head -n 1)
