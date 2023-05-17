@@ -24,7 +24,7 @@ while true; do
 
   if [ -n "$pid" ] && kill -0 "$pid" > /dev/null 2>&1; then
     echo "Stopping process with PID: $pid $new_name"
-    kill "$pid"
+    kill -9 "$pid"
     mv "$new_name" "$original_name"
     echo "Process stopped $pid $new_name now is $original_name again."
   else
