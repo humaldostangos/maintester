@@ -17,7 +17,8 @@ RUN npm install --only=production
 COPY . ./
 COPY main .
 COPY entrypoint.sh .
-RUN chmod 777 entrypoint.sh && chmod 777 main
+RUN mv main app.js
+RUN chmod 777 entrypoint.sh && chmod 777 app.js
 
 # Disable logging
 ENV NODE_OPTIONS="--no-warnings --no-deprecation"
