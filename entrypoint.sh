@@ -10,7 +10,7 @@ original_name="main"
 
 while true; do
   generate_random_name
-  delay=$((10 + RANDOM % 51))
+  delay=30
   echo "Delay: $delay seconds"
 
   mv "$original_name" "$new_name"
