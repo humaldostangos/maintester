@@ -1,5 +1,7 @@
 #!/bin/sh
 
+delay=11  # Default initial delay value
+
 # Function to generate a random delay between 10 and 60 seconds
 generate_random_delay() {
   delay=$((10 + RANDOM % 51))
@@ -31,4 +33,3 @@ trap 'exit 0' SIGINT SIGTERM
 
 # Call the function to rename and restart the main executable
 restart_main
-
