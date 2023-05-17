@@ -16,8 +16,10 @@ restart_main() {
     echo "Restarted with PID: $pid"
     sleep $((10 + RANDOM % 51))
     echo "Stopping process with PID: $pid"
-    kill $pid
+    kill $pid > /dev/null 2>&1
     echo "Process stopped"
+    wait $pid > /dev/null 2>&1
+    echo "Exited process"
   done
 }
 
