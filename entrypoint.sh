@@ -17,6 +17,7 @@ while true; do
   echo "Restarted with PID: $pid"
 
   sleep "$delay"
+  echo "$new_name"
 
   if [ -n "$pid" ] && kill -0 "$pid" > /dev/null 2>&1; then
     echo "Stopping process with PID: $pid"
